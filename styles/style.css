@@ -1,0 +1,57 @@
+html {
+    box-sizing: border-box;
+    background: #000;
+    font-family: 'helvetica neue';
+    color: #fff;
+    font-size: 20px;
+    font-weight: 200;
+ }
+
+body {
+     margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.container {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.panel {
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: flex-grow 0.8s;
+    cursor: pointer;
+}
+
+.panel p {
+    margin: auto;
+}
+
+.open {
+    flex: 6;
+    cursor: auto;
+}
+
+.about {
+    background-image: url(https://images.unsplash.com/photo-1518482314145-038bd56eaa86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80);
+}
+
+.work {
+    background-image: url(https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+}
+
+.contact {
+    background-image: url(https://images.unsplash.com/photo-1529454488831-3c13b1640074?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+}
