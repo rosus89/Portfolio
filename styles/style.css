@@ -17,7 +17,7 @@ body {
     box-sizing: inherit;
 }
 
-.container {
+.panels {
     min-height: 100vh;
     overflow: hidden;
     display: flex;
@@ -35,7 +35,7 @@ body {
     cursor: pointer;
 }
 
-.panel p {
+.panel .panel-name {
     margin: auto;
 }
 
@@ -54,4 +54,10 @@ body {
 
 .contact {
     background-image: url(https://images.unsplash.com/photo-1529454488831-3c13b1640074?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+}
+
+.container {
+    margin: 30px;
+    padding: 20px;
+    background: rgba(43, 21, 21, 0.5)
 }
