@@ -5,9 +5,24 @@ const about = document.querySelector('.about');
 const work = document.querySelector('.work');
 const contact = document.querySelector('.contact');
 
+let state = {
+    about: 0,
+    work: 0,
+    contact: 0
+}
+
+let reset = {
+    stateReset: JSON.parse(JSON.stringify(state)),
+    init: function() {
+        state = this.stateReset;
+    }
+}
+
+
 const aboutPage = document.querySelector('#aboutPage');
 const workPage = document.querySelector('#workPage');
 const contactPage = document.querySelector('#contactPage');
+
 
 function togglePanel() {
     panels.forEach(panel => panel.classList.remove('open'));
@@ -22,6 +37,8 @@ function render(element) {
         work.innerHTML = "My Work";
         contact.innerHTML = "Contact";
         element.innerHTML = aboutPage.innerHTML;
+        console.log(element);
+        element.innerHTML.classList.add('active');
     } else if (element.classList.contains('work') === true) {
         contact.innerHTML = "Contact";
         about.innerHTML = "About"

@@ -61,3 +61,12 @@ body {
     padding: 20px;
     background: rgba(43, 21, 21, 0.5)
 }
+
+.content {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.active {
+    opacity: 1; 
+}
