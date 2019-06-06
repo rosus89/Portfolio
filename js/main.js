@@ -24,12 +24,16 @@ const workPage = document.querySelector('#workPage');
 const contactPage = document.querySelector('#contactPage');
 
 
+
 function togglePanel() {
     panels.forEach(panel => panel.classList.remove('open'));
     panels.forEach(panel => panel.addEventListener('click', togglePanel));
     this.classList.toggle('open');
     this.removeEventListener('click', togglePanel);
     render(this);
+    let container = document.querySelector('.container');
+    setTimeout(function () { container.classList.add('active'); }, 100);
+    
 }
 
 function render(element) {
@@ -37,8 +41,7 @@ function render(element) {
         work.innerHTML = "My Work";
         contact.innerHTML = "Contact";
         element.innerHTML = aboutPage.innerHTML;
-        console.log(element);
-        element.innerHTML.classList.add('active');
+
     } else if (element.classList.contains('work') === true) {
         contact.innerHTML = "Contact";
         about.innerHTML = "About"
