@@ -17,6 +17,20 @@ body {
     box-sizing: inherit;
 }
 
+a {
+    text-decoration: none;
+    color: #bbb;
+}
+
+a:hover {
+    color: #fff;
+}
+
+i {
+    opacity: 1;
+    color: #fff;
+}
+
 .panels {
     min-height: 100vh;
     overflow: hidden;
@@ -33,10 +47,22 @@ body {
     overflow: hidden;
     transition: flex-grow 0.8s;
     cursor: pointer;
+    align-items: center;
+}
+
+.panel:hover .panel-name {
+    background: rgba(43, 21, 21, 0.4);
+    transition: background 0.7s;
+  
+
 }
 
 .panel .panel-name {
-    margin: auto;
+    margin: 20px;
+    background: rgba(43, 21, 21, 0);
+    width: 100%/3;
+    height: 100%;
+
 }
 
 .open {
@@ -57,6 +83,7 @@ body {
 }
 
 .container {
+    width: 86%;
     margin: 30px;
     padding: 20px;
     background: rgba(43, 21, 21, 0.5)
@@ -69,4 +96,46 @@ body {
 
 .active {
     opacity: 1; 
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.portfolio-item {
+    max-width: 30%;
+    margin: 10px;
+    overflow: hidden;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.portfolio-item .source {
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-item .title {
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);   
+    display:flex;
+    justify-content: center;
+    font-size: 1em;
+    margin: 1em 0;
+}
+
+h2 {
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
 }

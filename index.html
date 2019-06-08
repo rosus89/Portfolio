@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Stefan Rosu portfolio</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">    
 </head>
 <body>
 <div class="panels">
    <section class="panel about">
-    <p class="panel-name">About</p>
+    <p class="panel-name">
+        <h2>About</h2>
+        </p>
    </section>
 
    <section class="panel work">
@@ -22,27 +25,35 @@
    </section>
 
    <!-- Templates -->
+
    <!-- About -->
    <template id="aboutPage">
        <div class="container content">
-       <h3>About</h3>
-       <p>Hi my name is Stefan</p>
+       <h2>About</h2>
+       <p>Hi my name is Stefan, I'm a front-end web developer, and dad of two,I am passionate about coding.</p>
+       <p>Love working in Vanilla JS and some of my favorite frameworks are React.js and Vue.js.</p>
+       <p>If you want to know more, please check my <a target="_blank" href="https://www.linkedin.com/in/rosus/">Linkedin</a> profile.</p>
        </div>
    </template>
 
    <!-- Work -->
     <template id="workPage">
         <div class="container content">
-          Work Template
+        <h2>Portfolio</h2>
+        <div class="portfolio">
+
+        </div>
         </div>
     </template>
 
     <!-- Contact -->
     <template id="contactPage">
         <div class="container content">
-             Contact Template
+            <a href="https://github.com/rosus89"><i class="fab fa-github fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/rosus/"><i class="fab fa-linkedin-in fa-lg"></i></a>
         </div>
     </template>
+
 </div>
     <script src="js/main.js"></script>
 </body>
