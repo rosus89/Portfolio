@@ -113,6 +113,9 @@ i {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    overflow: auto;
+    max-height: 65vh;
+
 }
 
 .portfolio-item {

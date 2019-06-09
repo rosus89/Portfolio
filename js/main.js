@@ -57,7 +57,7 @@ function togglePanel() {
     this.removeEventListener('click', togglePanel);
     render(this);
     let container = document.querySelector('.container');
-    setTimeout(function () { container.classList.add('active'); }, 100);
+    setTimeout(function () { container.classList.add('active'); }, 0);
     
 }
 
