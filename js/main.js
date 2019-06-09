@@ -36,7 +36,7 @@ let pfContent = [
         srcUrl: "https://github.com/rosus89/Arcade-Game"
     },
     {
-        name: "Cat Clicker MVC",
+        name: "Cat Clicker",
         img: "./img/empty.png",
         url: "https://rosus89.github.io/CatClicker-MVC/",
         srcUrl: "https://github.com/rosus89/CatClicker-MVC"
@@ -63,13 +63,13 @@ function togglePanel() {
 
 function render(element) {
     if (element.classList.contains('about') === true) {
-        work.innerHTML = "My Work";
-        contact.innerHTML = "Contact";
+        work.innerHTML = panelName("My Work");
+        contact.innerHTML = panelName("Contact");
         element.innerHTML = aboutPage.innerHTML;
 
     } else if (element.classList.contains('work') === true) {
-        contact.innerHTML = "Contact";
-        about.innerHTML = "About";
+        contact.innerHTML = panelName("Contact");
+        about.innerHTML = panelName("About");
         element.innerHTML = workPage.innerHTML;
         let workList = "";
         for (let item of pfContent) {
@@ -78,8 +78,8 @@ function render(element) {
         const portfolio = document.querySelector('.portfolio');
         portfolio.innerHTML = workList;
     } else {
-        about.innerHTML = "About"
-        work.innerHTML = "My Work";
+        about.innerHTML = panelName("About");
+        work.innerHTML = panelName("My Work");
         element.innerHTML = contactPage.innerHTML;
 
 }
@@ -87,6 +87,9 @@ function render(element) {
 }
 panels.forEach(panel => panel.addEventListener('click', togglePanel));
 
+function panelName(name){
+    return `<p class="panel-name mini">${name}</p>`
+}
 
 function pfItem(item) {
     return `<div class="portfolio-item">

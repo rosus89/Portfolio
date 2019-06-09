@@ -48,6 +48,7 @@ i {
     transition: flex-grow 0.8s;
     cursor: pointer;
     align-items: center;
+    align-content: center;
 }
 
 .panel:hover .panel-name {
@@ -61,13 +62,23 @@ i {
     margin: 20px;
     background: rgba(43, 21, 21, 0);
     width: 100%/3;
-    height: 100%;
+    font-size: 2em;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+    font-weight: 800;
+
 
 }
 
 .open {
     flex: 6;
     cursor: auto;
+}
+
+.mini {
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
 }
 
 .about {
@@ -91,7 +102,7 @@ i {
 
 .content {
     opacity: 0;
-    transition: opacity 1.3s;
+    transition: opacity 3s;
 }
 
 .active {
@@ -107,7 +118,6 @@ i {
 .portfolio-item {
     max-width: 30%;
     margin: 10px;
-    overflow: hidden;
     min-width: 150px;
     display: flex;
     flex-direction: column;
