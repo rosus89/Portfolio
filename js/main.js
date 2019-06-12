@@ -100,3 +100,23 @@ function pfItem(item) {
             <a class="source" href="${item.srcUrl}">View Source</a>
             </div>`
 }
+
+let touchStartX, touchEndX = 0;
+
+document.addEventListener("touchstart", function(event){
+    touchStartX = event.changedTouches[0].screenX;
+}, false)
+document.addEventListener("touchend", function(event){
+    touchEndX = event.changedTouches[0].screenX;
+    handleSwipe();
+})
+
+function handleSwipe(){
+    if (touchStartX < touchEndX && (touchEndX - touchStartX) >= 30){
+    console.log("swipe Right")
+
+    }
+    else if (touchStartX > touchEndX && (touchStartX - touchEndX) >= 30){
+    console.log("swipe left")
+    }
+}
