@@ -9,18 +9,18 @@ const contactPage = document.querySelector('#contactPage');
 
 
 
-// let state = {
-//     about: 0,
-//     work: 0,
-//     contact: 0
-// }
+let state = {
+    about: false,
+    work: false,
+    contact: false
+}
 
-// let reset = {
-//     stateReset: JSON.parse(JSON.stringify(state)),
-//     init: function() {
-//         state = this.stateReset;
-//     }
-// }
+let reset = {
+    stateReset: JSON.parse(JSON.stringify(state)),
+    state: function() {
+        state = this.stateReset;
+    }
+}
 
 let pfContent = [
      {
@@ -51,14 +51,32 @@ let pfContent = [
 
 
 function togglePanel() {
-    panels.forEach(panel => panel.classList.remove('open'));
-    panels.forEach(panel => panel.addEventListener('click', togglePanel));
-    this.classList.toggle('open');
-    this.removeEventListener('click', togglePanel);
-    render(this);
-    let container = document.querySelector('.container');
-    setTimeout(function () { container.classList.add('active'); }, 0);
+    // panels.forEach(panel => panel.classList.remove('open'));
+    // panels.forEach(panel => panel.addEventListener('click', togglePanel));
+    // this.classList.toggle('open');
+    // this.removeEventListener('click', togglePanel);
+    let page = this.classList[1];
     
+    render(page);
+    changeState(page);
+    // let container = document.querySelector('.container');
+    // setTimeout(function () { container.classList.add('active'); }, 0);  
+}
+
+function changeState(page){
+    if (page == "about"){
+        reset.state;
+        state.about= true;
+    }
+    if (page == "work"){
+        reset.state;
+        state.work= true;
+    }
+    else if (page == "contact"){
+        reset.state;
+        state.contact= true;
+    }
+
 }
 
 function render(element) {
