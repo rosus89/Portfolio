@@ -10,7 +10,11 @@ const routes = {
     },
     about:{
         page:"./pages/about.html",
-        title: "about"
+        title: "skills"
+    },
+    portfolio:{
+        page:"./pages/portfolio.html",
+        title: "portfolio"
     },
     contact:{
         page:"./pages/contact.html",
@@ -26,6 +30,7 @@ function goTo(route){
 }
 
 goTo(routes.home)
+
 
 
 
