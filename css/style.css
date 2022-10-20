@@ -105,6 +105,7 @@ footer p,
     padding-top: 3rem ;
 }
 
+
 .white {
     color: #fff;
 }
@@ -122,3 +123,13 @@ footer p,
     padding: 0 2rem;
 }
 
+.skills{
+    column-count: 3;
+    column-rule: 1px solid var(--primary);
+    column-gap: 10rem;
+}
+
+.skills h2 {
+    font-weight: 600;
+    padding-bottom: 0.25rem;
+}
