@@ -1,5 +1,5 @@
 "use strict";
-(() => {
+
 
 
 const body = document.querySelector("#content")
@@ -13,7 +13,8 @@ const routes = {
         title: "about"
     },
     contact:{
-        page:"./pages/contact.html"
+        page:"./pages/contact.html",
+        title: "contact"
     }
 };
 
@@ -21,11 +22,11 @@ function goTo(route){
     fetch(route.page)
     .then(response => response.text())
     .then(html => body.innerHTML=html)
-    .catch(err => console.log('Failed to fetch page: ', err));
+    .catch(err => console.log('Page not found ', err));
 }
 
 goTo(routes.home)
 
 
-})();
+
 
