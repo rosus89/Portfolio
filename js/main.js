@@ -6,19 +6,19 @@ const body = document.querySelector("#content")
 const routes = {
     home:{
         page:"./pages/home.html",
-        title: "homepage"
+        title: "Home"
     },
     about:{
         page:"./pages/about.html",
-        title: "skills"
+        title: "Skills"
     },
     portfolio:{
         page:"./pages/portfolio.html",
-        title: "portfolio"
+        title: "Portfolio"
     },
     contact:{
         page:"./pages/contact.html",
-        title: "contact"
+        title: "Contact"
     }
 };
 
@@ -27,6 +27,7 @@ function goTo(route){
     .then(response => response.text())
     .then(html => body.innerHTML=html)
     .catch(err => console.log('Page not found ', err));
+    document.title = `Full Stack Ninja - ${route.title}`;
 }
 
 goTo(routes.home)
