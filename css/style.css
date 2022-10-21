@@ -51,6 +51,22 @@ h1 {
     text-transform: uppercase;
     font-weight: 700;
     cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+}
+
+.nav-link::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-hover);
+    transition: transform 0.5s;
+    transform-origin: 1 0;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.7,0.7);
+    transform: scaleX(0);
 }
 
 .nav-link:hover {
@@ -58,6 +74,10 @@ h1 {
     color: var(--primary-hover);
     
 }
+
+.nav-link:hover::before{
+    transform: scaleX(1);
+  }
 
 #content {
     margin-top: 6rem;
@@ -133,3 +153,4 @@ footer p,
     font-weight: 600;
     padding-bottom: 0.25rem;
 }
+
